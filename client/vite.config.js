@@ -27,7 +27,7 @@ export default defineConfig({
           resolve(distDir, "offline.html")
         );
 
-        console.log("JS files copied to dist/");
+        console.log("JS files copied to resources/");
       },
     },
   ],
