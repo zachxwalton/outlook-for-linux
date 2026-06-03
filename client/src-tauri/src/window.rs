@@ -114,6 +114,8 @@ fn inject_js_files(window: WebviewWindow) {
     thread::spawn(move || {
         thread::sleep(Duration::from_secs(3));
 
+        inject_js_resource(&window, "drag-region.js")
+            .expect("failed to inject drag-region.js");
         inject_js_resource(&window, "offline-banner.js")
             .expect("failed to inject offline-banner.js");
         inject_js_resource(&window, "notification.js")
